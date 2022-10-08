@@ -1,0 +1,198 @@
+main{
+  width: 100%;
+  gap: 10px;
+
+  .banner{
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .info-premios{
+    width: 100%;
+  }
+
+  .info-premios--title{
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .info-premios--text{
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(4, 400px);
+  }
+
+  .text-card{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .text-card h5{
+    font-size: 1.6rem;
+  } 
+
+  .text-card p{
+    font-size: 1.8rem;
+    text-align: justify;
+  }
+
+  .text-card button{
+    width: 130px;
+    height: 40px;
+    @include button;
+  }
+
+  .info-premios > button{
+    width: 314px;
+    height: 40px;
+    margin: 0 auto;
+    @include button;
+  }
+
+  .premios{
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .premios--title{
+    font-size: 3.5rem;
+    font-weight: 400;
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .premios-cards{
+    display: grid;
+    grid-template-rows: repeat(5, 450px);
+    grid-template-columns: minmax(375px, 100%);
+    margin: 0 auto;
+  }
+
+  .card-premio{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .card-premio img {
+    flex-grow: 1;
+    width: 50%;
+    max-width: 500px;
+    flex-basis: 430px;
+    padding: 15px;
+    order: 1;
+  }
+
+  .premio-cart--text{
+    order: 2;
+    flex-grow: 1;
+    max-width: 500px;
+    flex-basis: 430px;
+    padding: 15px;
+
+    h5{
+      font-size: 1.8rem;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    p{
+      font-size: 1.6rem;
+      text-align: justify;
+    }
+  }
+
+  .card-premio__final{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 15px;
+
+    img{
+      order: 1;
+      width: 100%;
+      justify-self: center;
+      align-self: center;
+    }
+    
+
+    .premio-cart--text__final{
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: justify;
+
+      h5{
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+      }
+
+      p{
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  .premios button{
+    display: inherit;
+    width: 80%;
+    height: 40px;
+    margin: 20px auto;
+    @include button;
+  }
+}
+
+
+// Styles for min width 768px
+@media screen and (min-width:768px){
+  main{
+    .info-premios--text{
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 400px);
+    }
+
+    .card-premio img{
+      order: unset;
+    }
+
+    .premio-cart--text{
+      order: unset;
+    }
+
+    .card-premio__final{
+      img{
+        order: unset;
+        max-width: 800px;
+      }
+
+      .premio-cart--text__final{
+        order: unset;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 20px;
+        justify-content: space-evenly;
+      }
+
+      .premio-cart--text__final h5{
+        flex-basis: 230px;
+      }
+
+      .premio-cart--text__final p{
+        flex-basis: 538px;
+      }
+    }
+    
+    .premios button{
+      max-width: 417px;
+    }
+  }
+}

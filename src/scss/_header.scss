@@ -1,0 +1,95 @@
+header{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  .home{
+    width: 195px;
+    height: 65px;
+    
+    .logo-img{
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  //Styles when loggin false
+  .btn-account{
+    display: flex;
+  }
+
+  .btn-account a{
+    margin-right: 10px;
+    width: 100px;
+    height: 40px;
+    @include button;
+  }
+  //Styles when loggin false
+  .nav--options{
+    display: flex;
+    justify-self: flex-start;
+    align-items: center;
+    gap: 15px;
+    height: 100%;
+    padding: 0px 10px;
+  }
+
+  .nav--options .icon{
+    display: none;
+    font-size: 3rem;
+
+    &:focus, &:hover{
+      text-decoration: none;
+      border: none;
+    }
+  }
+  
+  .nav--options a{
+    color: $red_color;
+    font-weight: 600;
+    font-size: 1.3rem;
+    height: 30px;
+    padding: 7px 2px;
+  }
+
+  .nav--options a:hover{
+    border-bottom: 4px solid $red_color;
+  }
+}
+
+.nav--responsive{
+  width: 350px;
+  height: min-content;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(237, 28, 46, 0.5);
+  top: 80px;
+  left: calc(50% - 175px);
+  padding: 10px;
+  display: none;
+
+}
+
+.nav--responsive a{
+  display: block;
+  font-size: 2rem;
+  color: black;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+// Styles for responsive header
+@media screen and (max-width: 768px){
+  .nav--options a:not(:last-child){
+    display: none;
+  }
+
+  .nav--options a.icon{
+    float: right;
+    display: block;
+  }
+
+
+}
+

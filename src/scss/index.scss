@@ -1,0 +1,21 @@
+@import './variables';
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+  font-size: 62.5%;
+  text-decoration: none;
+}
+
+// Styles for landign page
+@import './landing';
+@import './header';
+@import './about';
+@import './footer';
+// Styles for modal window info
+@import './modals-info';
+
+// Styles for signup and signin
+@import './signin-signup';

@@ -1,0 +1,16 @@
+header  
+  if logged
+    a(href=home, class="home") 
+      img(src=icon, alt="logo", class="logo-img")
+    nav.nav--options
+      a(href="/partidos") Malla de partidos
+      a(href="/pronosticos") Registra tus pronosticos
+      a(href="/ranking") Ranking de participantes
+      a(href="/ayuda") Ayuda
+      a(class="icon") &Congruent; 
+  else  
+    a(href=home, class="home") 
+      img(src=icon, alt="logo", class="logo-img")
+    .btn-account
+      a(href="/signin") Iniciar sesion
+      a(href="/signup") Registrarse
